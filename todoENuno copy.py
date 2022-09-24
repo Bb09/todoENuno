@@ -6,8 +6,6 @@ from calidda import *
 from sedapal import *
 from luz import *
 import requests
-from asyncio.windows_events import NULL
-from cgitb import text
 import time
 from typing import Text
 bot_token  = '5668749695:AAEk3WQEN35LzW-ONBcOJvwFvt1Q7784S54'
@@ -35,11 +33,11 @@ listatottus=json_data_tottus["results"][0]["prices"]
 contador=len(listatottus)
 
 if contador<=4:
-    test =(f"Código SKU: {codskuT}\nPrecio Online: {precioON}\nPrecio Normal :{precioRE}\nCon CMR : Sin Descuento\n✅Link: {enlaceTo}")
+    test =(f"Código SKU: {codskuT}\nPrecio Normal :{precioRE}\nPrecio Online: {precioON}\nCon CMR : Sin Descuento\n✅Link: {enlaceTo}")
 
 else:
     cmr=float(json_data_tottus["results"][0]["prices"]["cmrPrice"])
-    test =(f"Código SKU: {codskuT}\nPrecio Online: {precioON}\nPrecio Normal :{precioRE}\nCon CMR :{cmr}\n✅Link: {enlaceTo}")
+    test =(f"Código SKU: {codskuT}\nPrecio Normal :{precioRE}\nPrecio Online: {precioON}\nCon CMR :{cmr}\n✅Link: {enlaceTo}")
 
 
 ###########################################################################################
@@ -57,7 +55,7 @@ enlaceV=json_data_vea[0]["link"]
 preOnlineV=float(json_data_vea[0]["items"][0]["sellers"][0]["commertialOffer"]["Price"])
 preRealV=float(json_data_vea[0]["items"][0]["sellers"][0]["commertialOffer"]["ListPrice"])
 stockV=json_data_vea[0]["items"][0]["sellers"][0]["commertialOffer"]["AvailableQuantity"]
-msgvea=(f"📮📮📮PLAZA VEA📮📮📮\nCódigo de Producto: {codprodV}\nPrecio Online: {preOnlineV}\nPrecio Normal :{preRealV}\nStock : {stockV}\n✅Link : {enlaceV}")
+msgvea=(f"📮📮📮PLAZA VEA📮📮📮\nCódigo de Producto: {codprodV}\nPrecio Normal :{preRealV}\nPrecio Online: {preOnlineV}\nStock : {stockV}\n✅Link : {enlaceV}")
 ###########################################################################################
 #API - METRO:
 
@@ -73,7 +71,7 @@ enlace=json_data[0]["link"]
 preOnline=float(json_data[0]["items"][0]["sellers"][0]["commertialOffer"]["Price"])
 preReal=float(json_data[0]["items"][0]["sellers"][0]["commertialOffer"]["ListPrice"])
 stockM=json_data[0]["items"][0]["sellers"][0]["commertialOffer"]["AvailableQuantity"]
-msgmetro=(f"🔥🔥🔥METRO🔥🔥🔥\nCódigo de Producto: {codprod}\nPrecio Online: {preOnline}\nPrecio Normal :{preReal}\nStock : {stockM}\n✅Link : {enlace}")
+msgmetro=(f"🔥🔥🔥METRO🔥🔥🔥\nCódigo de Producto: {codprod}\nPrecio Normal :{preReal}\nPrecio Online: {preOnline}\nStock : {stockM}\n✅Link : {enlace}")
 
 ###########################################################################################
 #API - WONG:
@@ -90,7 +88,7 @@ enlacew=json_data_wong[0]["link"]
 preOnlinew=float(json_data_wong[0]["items"][0]["sellers"][0]["commertialOffer"]["Price"])
 preRealw=float(json_data_wong[0]["items"][0]["sellers"][0]["commertialOffer"]["ListPrice"])
 stockW=json_data_wong[0]["items"][0]["sellers"][0]["commertialOffer"]["AvailableQuantity"]
-msgwong=(f"📛📛📛WONG📛📛📛\nCódigo de Producto: {codprodw}\nPrecio Online: {preOnlinew}\nPrecio Normal :{preRealw}\nStock : {stockW}\n✅Link : {enlacew}")
+msgwong=(f"📛📛📛WONG📛📛📛\nCódigo de Producto: {codprodw}\nPrecio Normal :{preRealw}\nPrecio Online: {preOnlinew}\nStock : {stockW}\n✅Link : {enlacew}")
 
 
 bot_chatID = '@PiratexBBreniec'
