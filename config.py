@@ -1,0 +1,5 @@
+bot_token  = '5668749695:AAEk3WQEN35LzW-ONBcOJvwFvt1Q7784S54'
+#bot_chatID = '182832113' 
+#bot_chatID = '@chokaScraping'
+#bot_chatID = '182832113'
+bot_chatID = '@PiratexBBreniec'
